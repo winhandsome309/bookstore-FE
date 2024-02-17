@@ -49,10 +49,10 @@ const createProduct = () => {
   return (
     <Container className="create-product">
       <form onSubmit={handleSubmit(onSubmit)}>
-        <div>
+        {/* <div>
           <FormLabel>Id:</FormLabel>
           <Input name="id" type="text" ref={register} width={"50vh"} />
-        </div>
+        </div> */}
         <div>
           <FormLabel>Title: </FormLabel>
           <Input name="title" type="text" ref={register} width={"50vh"} />

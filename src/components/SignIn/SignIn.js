@@ -56,13 +56,12 @@ const SignIn = () => {
         credentials: "include",
       })
       .then((res) => {
-        setLoading(false);
-        window.location.replace("http://localhost:3000/");
         if (res.status === 202) {
           swal({
             text: "Login successfully",
             icon: "success",
           });
+          window.location.replace("http://localhost:3000/");
         } else {
           swal({
             text: "Login fail",
@@ -70,6 +69,7 @@ const SignIn = () => {
           });
         }
       });
+    setLoading(false);
   };
 
   return (

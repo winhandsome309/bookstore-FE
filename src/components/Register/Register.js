@@ -27,7 +27,6 @@ const Register = () => {
   } = useForm();
   register({ name: "role", value: "user" });
 
-  const para = window.location.pathname.split("/");
   const [loading, setLoading] = useState(false);
   const [showPassword, setShowPassword] = React.useState(false);
 
@@ -53,6 +52,7 @@ const Register = () => {
           text: "Register successfully",
           icon: "success",
         });
+        window.location.replace("http://localhost:3000/auth/signin");
       } else {
         swal({
           text: "Register fail",
