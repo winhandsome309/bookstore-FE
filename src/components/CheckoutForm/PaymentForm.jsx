@@ -32,6 +32,7 @@ const PaymentForm = ({
             text: "Purchase successfully",
             icon: "success",
           });
+          window.location.replace("http://localhost:3000/");
         } else {
           swal({
             text: "Purchase fail",

@@ -63,7 +63,10 @@ const App = () => {
       })
       .then((res) => {
         setNewProducts(res.data["products"]);
-        setUser(res.data["user"]);
+        if (res.data["user"] != null) {
+          setUser(res.data["user"]);
+          fetchOrderLines();
+        }
       });
   };
 
@@ -81,7 +84,7 @@ const App = () => {
 
   useEffect(() => {
     fetchNewProducts();
-    fetchOrderLines();
+    // fetchOrderLines();
   }, []);
 
   const handleDrawerToggle = () => setMobileOpen(!mobileOpen);

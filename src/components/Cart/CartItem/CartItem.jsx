@@ -72,6 +72,7 @@ const CartItem = ({ item, totalPrice, setTotalPrice, totalItem, setTotalItem, on
           <LoadingButton
             type="submit"
             size="small"
+            disabled={totalQuantity === item["product"]["quantity"]}
             onClick={() => {
               setLoading(true);
               handleUpDown(1);

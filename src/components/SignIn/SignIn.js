@@ -57,6 +57,7 @@ const SignIn = () => {
       })
       .then((res) => {
         setLoading(false);
+        window.location.replace("http://localhost:3000/");
         if (res.status === 202) {
           swal({
             text: "Login successfully",
