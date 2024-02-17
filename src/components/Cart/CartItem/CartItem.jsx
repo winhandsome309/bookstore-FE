@@ -21,7 +21,7 @@ const CartItem = ({ item, totalPrice, setTotalPrice, totalItem, setTotalItem, on
     formData.append("order_id", item["order_id"])
     formData.append("quantity", quantity)
     formData.append("price", quantity * item["product"]["price"])
-    axios.post("http://localhost:8080/orders", formData, {
+    axios.post("https://go-bookstore-opbz.onrender.com/orders", formData, {
       withCredentials: true,
       credentials: "include",
     }).then((res) => {
@@ -34,7 +34,7 @@ const CartItem = ({ item, totalPrice, setTotalPrice, totalItem, setTotalItem, on
 
   const fetchProduct = async () => {
     axios
-      .get("http://localhost:8080/products/" + item["product_id"], {
+      .get("https://go-bookstore-opbz.onrender.com/products/" + item["product_id"], {
         withCredentials: true,
         credentials: "include",
       })

@@ -22,7 +22,7 @@ const PaymentForm = ({
     formData.append("shipping_district", shippingData["shippingDistrict"]);
     formData.append("shipping_ward", shippingData["shippingWard"]);
     formData.append("order_id", order["id"]);
-    axios.post("http://localhost:8080/checkout", formData, {
+    axios.post("https://go-bookstore-opbz.onrender.com/checkout", formData, {
       withCredentials: true,
       credentials: "include",
     })
@@ -32,7 +32,7 @@ const PaymentForm = ({
             text: "Purchase successfully",
             icon: "success",
           });
-          window.location.replace("http://localhost:3000/");
+          window.location.replace("https://bookstore-fe-v8ch.onrender.com/");
         } else {
           swal({
             text: "Purchase fail",

@@ -16,19 +16,21 @@ const createProduct = () => {
   const createProduct = async (data) => {
     const formData = new FormData();
     Object.keys(data).forEach((key) => formData.append(key, data[key]));
-    axios.post("http://localhost:8080/products", formData).then((res) => {
-      if (res.status === 200) {
-        swal({
-          text: "Created successfully",
-          icon: "success",
-        });
-      } else {
-        swal({
-          text: "Created fail",
-          icon: "error",
-        });
-      }
-    });
+    axios
+      .post("https://go-bookstore-opbz.onrender.com/products", formData)
+      .then((res) => {
+        if (res.status === 200) {
+          swal({
+            text: "Created successfully",
+            icon: "success",
+          });
+        } else {
+          swal({
+            text: "Created fail",
+            icon: "error",
+          });
+        }
+      });
   };
 
   const onSubmit = async (data) => {

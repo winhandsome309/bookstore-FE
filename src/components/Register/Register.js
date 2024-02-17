@@ -45,21 +45,25 @@ const Register = () => {
     Object.keys(data).forEach((key) => {
       formData.append(key, data[key]);
     });
-    axios.post("http://localhost:8080/auth/register", formData).then((res) => {
-      setLoading(false);
-      if (res.status === 200) {
-        swal({
-          text: "Register successfully",
-          icon: "success",
-        });
-        window.location.replace("http://localhost:3000/auth/signin");
-      } else {
-        swal({
-          text: "Register fail",
-          icon: "error",
-        });
-      }
-    });
+    axios
+      .post("https://go-bookstore-opbz.onrender.com/auth/register", formData)
+      .then((res) => {
+        setLoading(false);
+        if (res.status === 200) {
+          swal({
+            text: "Register successfully",
+            icon: "success",
+          });
+          window.location.replace(
+            "https://bookstore-fe-v8ch.onrender.com/auth/signin"
+          );
+        } else {
+          swal({
+            text: "Register fail",
+            icon: "error",
+          });
+        }
+      });
   };
 
   return (

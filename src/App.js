@@ -35,9 +35,11 @@ const App = () => {
   const [newProducts, setNewProducts] = useState([]);
 
   const fetchCart = async () => {
-    axios.get("http://localhost:8080/orders/" + user["id"]).then((res) => {
-      setCart(res.data);
-    });
+    axios
+      .get("https://go-bookstore-opbz.onrender.com/orders/" + user["id"])
+      .then((res) => {
+        setCart(res.data);
+      });
   };
 
   const handleAddToCart = async (productId, quantity, price) => {
@@ -46,7 +48,7 @@ const App = () => {
     formData.append("quantity", quantity);
     formData.append("price", price);
     axios
-      .post("http://localhost:8080/orders", formData, {
+      .post("https://go-bookstore-opbz.onrender.com/orders", formData, {
         withCredentials: true,
         credentials: "include",
       })
@@ -58,7 +60,7 @@ const App = () => {
 
   const fetchNewProducts = async () => {
     axios
-      .get("http://localhost:8080/products", {
+      .get("https://go-bookstore-opbz.onrender.com/products", {
         withCredentials: true,
       })
       .then((res) => {
@@ -72,7 +74,7 @@ const App = () => {
 
   const fetchOrderLines = async () => {
     axios
-      .get("http://localhost:8080/orders", {
+      .get("https://go-bookstore-opbz.onrender.com/orders", {
         withCredentials: true,
         credentials: "include",
       })

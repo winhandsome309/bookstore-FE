@@ -29,12 +29,14 @@ const ProductView = () => {
   const [newProducts, setNewProducts] = useState([]);
 
   const fetchNewProducts = async (id) => {
-    axios.get("http://localhost:8080/products/" + id).then((response) => {
-      setNewProducts(response.data);
-      // response.data.map((product) => {
-      //   console.log(product);
-      // });
-    });
+    axios
+      .get("https://go-bookstore-opbz.onrender.com/products/" + id)
+      .then((response) => {
+        setNewProducts(response.data);
+        // response.data.map((product) => {
+        //   console.log(product);
+        // });
+      });
   };
 
   useEffect(() => {

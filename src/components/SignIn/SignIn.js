@@ -49,7 +49,7 @@ const SignIn = () => {
       formData.append(key, data[key]);
     });
     axios
-      .post("http://localhost:8080/auth/signin", formData, {
+      .post("https://go-bookstore-opbz.onrender.com/auth/signin", formData, {
         headers: headers,
         withCredentials: true,
         // credentials: "same-site",
@@ -61,7 +61,7 @@ const SignIn = () => {
             text: "Login successfully",
             icon: "success",
           });
-          window.location.replace("http://localhost:3000/");
+          window.location.replace("https://bookstore-fe-v8ch.onrender.com/");
         } else {
           swal({
             text: "Login fail",
