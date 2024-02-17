@@ -13,8 +13,6 @@
     "@mui/icons-material": "^5.15.9",
     "@mui/lab": "^5.0.0-alpha.165",
     "@mui/material": "^5.15.9",
-    "@stripe/react-stripe-js": "^1.1.2",
-    "@stripe/stripe-js": "^1.11.0",
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
@@ -31,7 +29,6 @@
     "react-router": "^5.2.0",
     "react-router-dom": "^5.2.0",
     "react-scripts": "^5.0.1",
-    "react-stripe-elements": "^6.1.2",
     "semantic-ui-react": "^2.0.1",
     "sweetalert": "^2.1.2"
   },
