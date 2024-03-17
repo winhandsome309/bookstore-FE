@@ -29,7 +29,7 @@ const AddressForm = ({ test }) => {
 
   const fetchShippingProvinces = async () => {
     axios
-      .get("https://go-bookstore-opbz.onrender.com/location/provinces")
+      .get(process.env.REACT_APP_BACKEND_HOSTING + "/location/provinces")
       .then((res) => {
         setShippingProvinces(res.data);
         res.data.forEach((item) => {
@@ -44,7 +44,7 @@ const AddressForm = ({ test }) => {
 
   const fetchShippingDistricts = async (provinceCode) => {
     axios
-      .get(`https://go-bookstore-opbz.onrender.com/location/districts?provinceId=${provinceCode}`)
+      .get(process.env.REACT_APP_BACKEND_HOSTING + `/location/districts?provinceId=${provinceCode}`)
       .then((res) => {
         setShippingDistricts(res.data);
         res.data.forEach((item) => {
@@ -59,7 +59,7 @@ const AddressForm = ({ test }) => {
 
   const fetchShippingWards = async (districtCode) => {
     axios
-      .get(`https://go-bookstore-opbz.onrender.com/location/wards?districtId=${districtCode}`)
+      .get(process.env.REACT_APP_BACKEND_HOSTING + `/location/wards?districtId=${districtCode}`)
       .then((res) => {
         setShippingWards(res.data);
         res.data.forEach((item) => {

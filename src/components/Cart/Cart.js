@@ -15,7 +15,7 @@ const Cart = ({ order, totalItem, setTotalItem }) => {
 
   const handleEmptyCart = () => {
     axios
-      .delete("https://go-bookstore-opbz.onrender.com/orders/" + order["id"])
+      .delete(process.env.REACT_APP_BACKEND_HOSTING + "/orders/" + order["id"])
       .then((res) => {
         setTotalItem(0);
         if (res.status === 200) {
@@ -41,7 +41,7 @@ const Cart = ({ order, totalItem, setTotalItem }) => {
 
   const fetchOrder = async () => {
     axios
-      .get("https://go-bookstore-opbz.onrender.com/orders", {
+      .get(process.env.REACT_APP_BACKEND_HOSTING + "/orders", {
         withCredentials: true,
         credentials: "include",
       })
@@ -65,7 +65,7 @@ const Cart = ({ order, totalItem, setTotalItem }) => {
     formData.append("product_id", productId);
     formData.append("order_id", orderId);
     axios
-      .delete("https://go-bookstore-opbz.onrender.com/orderlines", {
+      .delete(process.env.REACT_APP_BACKEND_HOSTING + "/orderlines", {
         data: formData,
         // withCredentials: true,
         // credentials: "include",

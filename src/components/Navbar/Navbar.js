@@ -42,7 +42,7 @@ const Navbar = ({ totalItems, hide = false, user }) => {
   const onSubmit = async () => {
     axios
       .post(
-        "https://go-bookstore-opbz.onrender.com/auth/signout",
+        process.env.REACT_APP_BACKEND_HOSTING + "/auth/signout",
         {},
         {
           headers: headers,
@@ -75,7 +75,7 @@ const Navbar = ({ totalItems, hide = false, user }) => {
             // to="/"
             onClick={() => {
               window.location.replace(
-                "https://bookstore-fe-v8ch.onrender.com/"
+                process.env.REACT_APP_FE_MAIN_PAGE
               );
             }}
             variant="h5"

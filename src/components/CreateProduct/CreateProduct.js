@@ -17,7 +17,7 @@ const createProduct = () => {
     const formData = new FormData();
     Object.keys(data).forEach((key) => formData.append(key, data[key]));
     axios
-      .post("https://go-bookstore-opbz.onrender.com/products", formData)
+      .post(process.env.REACT_APP_BACKEND_HOSTING + "/products", formData)
       .then((res) => {
         if (res.status === 200) {
           swal({

@@ -24,7 +24,7 @@ const UpdateProduct = () => {
     Object.keys(data).forEach((key) => formData.append(key, data[key]));
     axios
       .patch(
-        "https://go-bookstore-opbz.onrender.com/products/" +
+        process.env.REACT_APP_BACKEND_HOSTING + "/products/" +
           para[para.length - 1],
         formData
       )

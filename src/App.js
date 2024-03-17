@@ -36,7 +36,7 @@ const App = () => {
 
   const fetchCart = async () => {
     axios
-      .get("https://go-bookstore-opbz.onrender.com/orders/" + user["id"])
+      .get(process.env.REACT_APP_BACKEND_HOSTING + "/orders/" + user["id"])
       .then((res) => {
         setCart(res.data);
       });
@@ -48,7 +48,7 @@ const App = () => {
     formData.append("quantity", quantity);
     formData.append("price", price);
     axios
-      .post("https://go-bookstore-opbz.onrender.com/orders", formData, {
+      .post(process.env.REACT_APP_BACKEND_HOSTING + "/orders", formData, {
         withCredentials: true,
         credentials: "include",
       })
@@ -60,7 +60,7 @@ const App = () => {
 
   const fetchNewProducts = async () => {
     axios
-      .get("https://go-bookstore-opbz.onrender.com/products", {
+      .get(process.env.REACT_APP_BACKEND_HOSTING + "/products", {
         withCredentials: true,
       })
       .then((res) => {
@@ -74,7 +74,7 @@ const App = () => {
 
   const fetchOrderLines = async () => {
     axios
-      .get("https://go-bookstore-opbz.onrender.com/orders", {
+      .get(process.env.REACT_APP_BACKEND_HOSTING + "/orders", {
         withCredentials: true,
         credentials: "include",
       })

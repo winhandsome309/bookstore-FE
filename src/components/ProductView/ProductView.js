@@ -30,7 +30,7 @@ const ProductView = () => {
 
   const fetchNewProducts = async (id) => {
     axios
-      .get("https://go-bookstore-opbz.onrender.com/products/" + id)
+      .get(process.env.REACT_APP_BACKEND_HOSTING + "/products/" + id)
       .then((response) => {
         setNewProducts(response.data);
         // response.data.map((product) => {
