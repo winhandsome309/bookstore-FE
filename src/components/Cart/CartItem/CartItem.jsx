@@ -82,7 +82,7 @@ const CartItem = ({ item, totalPrice, setTotalPrice, totalItem, setTotalItem, on
             +
           </LoadingButton>
         </div>
-        <Button className={classes.button} variant="contained" type="button" color='secondary' onClick={() => onRemoveFromCart(item["product_id"], item["order_id"], totalQuantity)}>Remove</Button>
+        <Button className={classes.button} variant="contained" type="button" color='secondary' onClick={() => onRemoveFromCart(item["product"]["id"], item["order_id"], totalQuantity)}>Remove</Button>
       </CardActions>
     </Card>
   );

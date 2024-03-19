@@ -10,7 +10,7 @@ const PaymentForm = ({
   order,
   user,
 }) => {
-
+  
   const onSubmit = async () => {
     const formData = new FormData();
     formData.append("first_name", shippingData["firstName"]);
@@ -22,17 +22,19 @@ const PaymentForm = ({
     formData.append("shipping_district", shippingData["shippingDistrict"]);
     formData.append("shipping_ward", shippingData["shippingWard"]);
     formData.append("order_id", order["id"]);
-    axios.post(process.env.REACT_APP_BACKEND_HOSTING + "/checkout", formData, {
+
+    axios.post(process.env.REACT_APP_BACKEND_HOSTING + "/payment/" + user["id"], formData, {
       withCredentials: true,
       credentials: "include",
     })
       .then((res) => {
         if (res.status === 200) {
-          swal({
-            text: "Purchase successfully",
-            icon: "success",
-          });
-          window.location.replace(process.env.REACT_APP_FE_MAIN_PAGE);
+          window.location.href = res.data["payUrl"];
+          // swal({
+          //   text: "Purchase successfully",
+          //   icon: "success",
+          // });
+          // window.location.replace(process.env.REACT_APP_FE_MAIN_PAGE);
         } else {
           swal({
             text: "Purchase fail",
@@ -50,7 +52,7 @@ const PaymentForm = ({
     <>
       <Review order={order} />
       <Divider />
-      <ListItem style={{ padding: '10px 0' }}>
+      {/* <ListItem style={{ padding: '10px 0' }}>
         <ListItemText primary={<Typography style={{ fontWeight: 700 }} gutterBottom >
           Your Balance
         </Typography>} />
@@ -66,7 +68,7 @@ const PaymentForm = ({
         <Typography variant="subtitle1" style={{ fontWeight: 700 }}>
           {user["balance"] - order["total_price"]}
         </Typography>
-      </ListItem >
+      </ListItem > */}
       {/* <form onSubmit={() => onSubmit()}> */}
       <br /> <br />
       <div style={{ display: "flex", justifyContent: "space-between" }}>
@@ -78,10 +80,12 @@ const PaymentForm = ({
           variant="contained"
           style={{ backgroundColor: "#001524", color: "#FFFF" }}
           onClick={() => {
-            (user["balance"] - order["total_price"] >= 0) ? onSubmit() : onAddMoney();
+            // (user["balance"] - order["total_price"] >= 0) ? onSubmit() : onAddMoney();
+            onSubmit()
           }}
         >
-          {user["balance"] - order["total_price"] >= 0 ? "Pay" : "Add more money"}
+          {/* {user["balance"] - order["total_price"] >= 0 ? "Pay" : "Add more money"} */}
+          Pay
         </Button>
       </div>
       {/* </form> */}
