@@ -138,7 +138,7 @@ const Footer = () => {
                             Contact
                         </div>
                         <div className='w-auto h-auto py-2 font-thin'>
-                            Email: thebookstore@gmail.com
+                            Email: thebookshop@gmail.com
                         </div>
                         <div className='w-auto h-auto py-2'>
                             Phone: 0123456789
@@ -188,7 +188,6 @@ const Footer = () => {
                         <div className='w-auto h-auto py-2 font-thin'>
                             <a
                                 href={`/profile`}
-                                
                                 className='transition-all ease-in-out duration-200'
                             >
                                 Acount
@@ -212,20 +211,11 @@ const Footer = () => {
                                 Order
                             </a>
                         </div>
-                        <div className='w-auto h-auto py-2'>
-                            <a
-                                href={`/`}
-                                
-                                className='transition-all ease-in-out duration-200'
-                            >
-                                Feedback
-                            </a>
-                        </div>
                     </div>
                     {/* Receive information */}
                 </div>
                 <div className='h-auto w-auto font-extrabold text-3xl text-center font-serif py-8'>
-                    THE BOOK STORE
+                    THE BOOK SHOP
                 </div>
             </div>
         </footer>

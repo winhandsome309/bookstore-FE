@@ -1,7 +1,7 @@
 import { AppBar, Badge, Toolbar, Typography } from "@material-ui/core";
 import { ThemeProvider, createMuiTheme } from "@material-ui/core/styles";
 import { ShoppingCart } from "@material-ui/icons";
-import LocalShippingIcon from '@mui/icons-material/LocalShipping';
+import LocalShippingIcon from "@mui/icons-material/LocalShipping";
 import AddCircleIcon from "@material-ui/icons/AddCircle";
 import AccountCircleOutlinedIcon from "@mui/icons-material/AccountCircleOutlined";
 import LoginIcon from "@mui/icons-material/Login";
@@ -75,9 +75,7 @@ const Navbar = ({ totalItems, hide = false, user }) => {
             component={Link}
             // to="/"
             onClick={() => {
-              window.location.replace(
-                process.env.REACT_APP_FE_MAIN_PAGE
-              );
+              window.location.replace(process.env.REACT_APP_FE_MAIN_PAGE);
             }}
             variant="h5"
             className={classes.title}
@@ -94,14 +92,43 @@ const Navbar = ({ totalItems, hide = false, user }) => {
             />
             <div>THE BOOK SHOP</div>
           </Typography>
+          <div className="flex flex-row justify-between gap-3 h-full items-center align-middle ml-4">
+            <div className="w-auto h-auto font-extrabold text-lg">
+              <a href={`/`} className="transition-all ease-in-out duration-200">
+                Home
+              </a>
+            </div>
+            <div className="w-auto h-auto font-extrabold text-lg">
+              <a
+                href={`/menu`}
+                className="transition-all ease-in-out duration-200"
+              >
+                Menu
+              </a>
+            </div>
+            <div className="w-auto h-auto font-extrabold text-lg">
+              <a
+                href={`/about`}
+                className="transition-all ease-in-out duration-200"
+              >
+                About
+              </a>
+            </div>
+            <div className="w-auto h-auto font-extrabold text-lg">
+              <a
+                href={`/term`}
+                className="transition-all ease-in-out duration-200"
+              >
+                FAQs
+              </a>
+            </div>
+          </div>
           <div className={classes.grow} />
           {hide ? (
             <></>
           ) : (
             <div className={classes.menuButton}>
-              {user ? (
-                <>
-                <IconButton
+              <IconButton
                 aria-label="Create product"
                 color="inherit"
                 onClick={() => {
@@ -109,7 +136,7 @@ const Navbar = ({ totalItems, hide = false, user }) => {
                 }}
               >
                 <Badge color="secondary">
-                  <AddCircleIcon style={{ fontSize: 25 }} />
+                  <AddCircleIcon />
                 </Badge>
               </IconButton>
               <IconButton
@@ -119,38 +146,29 @@ const Navbar = ({ totalItems, hide = false, user }) => {
                 color="inherit"
               >
                 <Badge badgeContent={totalItems} color="secondary">
-                  <ShoppingCart style={{ fontSize: 25 }}/>
+                  <ShoppingCart />
                 </Badge>
               </IconButton>
-              <IconButton
-                component={Link}
-                to="/shipping"
-                aria-label="Show shipping items"
-                color="inherit"
-              >
-                <Badge color="secondary">
-                  <LocalShippingIcon style={{ fontSize: 25 }}/>
-                </Badge>
-              </IconButton>
+              {user ? (
+                <>
                   <IconButton
                     aria-label="Log out"
                     color="inherit"
                     onClick={() => onSubmit()}
                   >
                     <Badge color="secondary">
-                      <LogoutIcon style={{ fontSize: 25 }}/>
+                      <LogoutIcon />
                     </Badge>
                   </IconButton>
                   <Tooltip
                     title={
                       <ThemeProvider theme={theme}>
                         <Typography color="inherit" variant="body1">
-                          {/* Email: {user["email"]} */}
-                          {user["email"]}
+                          Email: {user["email"]}
                         </Typography>
-                        {/* <Typography color="inherit" variant="body1">
+                        <Typography color="inherit" variant="body1">
                           Balance: {user["balance"]} đ
-                        </Typography> */}
+                        </Typography>
                       </ThemeProvider>
                     }
                   >
@@ -161,7 +179,7 @@ const Navbar = ({ totalItems, hide = false, user }) => {
                       color="inherit"
                     >
                       <Badge color="secondary">
-                        <AccountCircleOutlinedIcon style={{ fontSize: 45 }} />
+                        <AccountCircleOutlinedIcon style={{ fontSize: 40 }} />
                       </Badge>
                     </IconButton>
                   </Tooltip>
