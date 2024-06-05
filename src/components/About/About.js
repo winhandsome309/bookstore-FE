@@ -9,7 +9,7 @@ const About = () => {
             <div className='w-auto h-auto font-extrabold text-3xl text-black '>
                 Our story from the beginning
             </div>
-            <div className='w-auto h-auto font-bold text-xl text-zinc-800 '>
+            <div className='w-auto h-auto font-bold text-xl text-zinc-800 pb-2'>
                 This is where we tell you all stories about us from the
                 beginning till now
             </div>

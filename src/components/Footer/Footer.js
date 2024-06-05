@@ -95,7 +95,6 @@ const Footer = () => {
         <footer className='bg-black text-white h-auto text-item-white pt-10 z-30 mt-10 mb-0'>
             <div className='w-auto'>
                 <div className='h-auto w-auto flex flex-col md:flex-row gap-4 justify-around items-center md:items-start'>
-                    {/* ABOUT US */}
                     <div className='flex flex-col text-left md:text-left'>
                         <div className='w-auto h-auto font-extrabold text-lg pb-6'>
                             <a
@@ -116,16 +115,7 @@ const Footer = () => {
                         </div>
                         <div className='w-auto h-auto py-2'>
                             <a
-                                href={`/about`}
-                                
-                                className='transition-all ease-in-out duration-200'
-                            >
-                                Policies
-                            </a>
-                        </div>
-                        <div className='w-auto h-auto py-2'>
-                            <a
-                                href={`/about`}
+                                href={`/term`}
                                 
                                 className='transition-all ease-in-out duration-200'
                             >
@@ -134,11 +124,11 @@ const Footer = () => {
                         </div>
                         <div className='w-auto h-auto py-2'>
                             <a
-                                href={`/about`}
+                                href={`/term`}
                                 
                                 className='transition-all ease-in-out duration-200'
                             >
-                                Term and condition
+                                Terms and conditions
                             </a>
                         </div>
                     </div>

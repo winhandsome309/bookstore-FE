@@ -19,7 +19,8 @@ import SignIn from "./components/SignIn/SignIn";
 import UpdateProduct from "./components/UpdateProduct/UpdateProduct";
 import Checkout from "./components/CheckoutForm/Checkout/Checkout";
 import "./style.css";
-
+import About from "./components/About/About";
+import Term from "./components/Term/Term";
 const App = () => {
   const [mobileOpen, setMobileOpen] = React.useState(false);
   const [products, setProducts] = useState([]);
@@ -187,6 +188,16 @@ const App = () => {
                         hide={true}
                       />
                       <About />
+                    </Route>
+                    <Route path="/term" exact>
+                      <CssBaseline />
+                      <Navbar
+                        totalItems={totalItem}
+                        setTotalItem={setTotalItem}
+                        handleDrawerToggle={handleDrawerToggle}
+                        hide={true}
+                      />
+                      <Term />
                     </Route>
                   </Switch>
                 </div>
