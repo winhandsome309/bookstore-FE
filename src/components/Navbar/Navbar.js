@@ -98,14 +98,14 @@ const Navbar = ({ totalItems, hide = false, user }) => {
                 Home
               </a>
             </div>
-            <div className="w-auto h-auto font-extrabold text-lg">
-              <a
-                href={`/menu`}
-                className="transition-all ease-in-out duration-200"
-              >
-                Menu
-              </a>
-            </div>
+            {/* <div className='w-auto h-auto font-extrabold text-lg'>
+                            <a
+                                href={`/menu`}
+                                className='transition-all ease-in-out duration-200'
+                            >
+                                Books
+                            </a>
+                        </div> */}
             <div className="w-auto h-auto font-extrabold text-lg">
               <a
                 href={`/about`}
