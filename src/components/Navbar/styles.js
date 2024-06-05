@@ -1,4 +1,5 @@
 import { makeStyles } from "@material-ui/core/styles";
+import { Scale } from "@mui/icons-material";
 
 const drawerWidth = 0;
 

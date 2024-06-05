@@ -1,6 +1,7 @@
 import { AppBar, Badge, Toolbar, Typography } from "@material-ui/core";
 import { ThemeProvider, createMuiTheme } from "@material-ui/core/styles";
 import { ShoppingCart } from "@material-ui/icons";
+import LocalShippingIcon from '@mui/icons-material/LocalShipping';
 import AddCircleIcon from "@material-ui/icons/AddCircle";
 import AccountCircleOutlinedIcon from "@mui/icons-material/AccountCircleOutlined";
 import LoginIcon from "@mui/icons-material/Login";
@@ -95,7 +96,9 @@ const Navbar = ({ totalItems, hide = false, user }) => {
             <></>
           ) : (
             <div className={classes.menuButton}>
-              <IconButton
+              {user ? (
+                <>
+                <IconButton
                 aria-label="Create product"
                 color="inherit"
                 onClick={() => {
@@ -103,7 +106,7 @@ const Navbar = ({ totalItems, hide = false, user }) => {
                 }}
               >
                 <Badge color="secondary">
-                  <AddCircleIcon />
+                  <AddCircleIcon style={{ fontSize: 25 }} />
                 </Badge>
               </IconButton>
               <IconButton
@@ -113,29 +116,38 @@ const Navbar = ({ totalItems, hide = false, user }) => {
                 color="inherit"
               >
                 <Badge badgeContent={totalItems} color="secondary">
-                  <ShoppingCart />
+                  <ShoppingCart style={{ fontSize: 25 }}/>
                 </Badge>
               </IconButton>
-              {user ? (
-                <>
+              <IconButton
+                component={Link}
+                to="/shipping"
+                aria-label="Show shipping items"
+                color="inherit"
+              >
+                <Badge color="secondary">
+                  <LocalShippingIcon style={{ fontSize: 25 }}/>
+                </Badge>
+              </IconButton>
                   <IconButton
                     aria-label="Log out"
                     color="inherit"
                     onClick={() => onSubmit()}
                   >
                     <Badge color="secondary">
-                      <LogoutIcon />
+                      <LogoutIcon style={{ fontSize: 25 }}/>
                     </Badge>
                   </IconButton>
                   <Tooltip
                     title={
                       <ThemeProvider theme={theme}>
                         <Typography color="inherit" variant="body1">
-                          Email: {user["email"]}
+                          {/* Email: {user["email"]} */}
+                          {user["email"]}
                         </Typography>
-                        <Typography color="inherit" variant="body1">
+                        {/* <Typography color="inherit" variant="body1">
                           Balance: {user["balance"]} đ
-                        </Typography>
+                        </Typography> */}
                       </ThemeProvider>
                     }
                   >
@@ -146,7 +158,7 @@ const Navbar = ({ totalItems, hide = false, user }) => {
                       color="inherit"
                     >
                       <Badge color="secondary">
-                        <AccountCircleOutlinedIcon style={{ fontSize: 40 }} />
+                        <AccountCircleOutlinedIcon style={{ fontSize: 45 }} />
                       </Badge>
                     </IconButton>
                   </Tooltip>

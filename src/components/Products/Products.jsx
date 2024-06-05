@@ -1,5 +1,13 @@
 import React, { useState, useRef } from "react";
-import { Grid, InputAdornment, Input, Button, Typography, Box, Modal } from "@material-ui/core";
+import {
+  Grid,
+  InputAdornment,
+  Input,
+  Button,
+  Typography,
+  Box,
+  Modal,
+} from "@material-ui/core";
 import SearchIcon from "@material-ui/icons/Search";
 import Product from "./Product/Product.js";
 import useStyles from "./styles";
@@ -208,7 +216,7 @@ const Products = ({ products, onAddToCart, featureProducts }) => {
               if (searchTerm === "") {
                 return product;
               } else if (
-                product['title']
+                product["title"]
                   .toLowerCase()
                   .includes(searchTerm.toLocaleLowerCase())
               ) {
