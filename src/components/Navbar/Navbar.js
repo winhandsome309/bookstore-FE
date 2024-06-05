@@ -11,7 +11,7 @@ import Tooltip from "@mui/material/Tooltip";
 import axios from "axios";
 import React from "react";
 import { Link } from "react-router-dom";
-import logo from "../../assets/circles.png";
+import logo from "../../assets/Logo.png";
 import useStyles from "./styles";
 
 const Navbar = ({ totalItems, hide = false, user }) => {
@@ -88,8 +88,11 @@ const Navbar = ({ totalItems, hide = false, user }) => {
               alt="Book Store App"
               height="50px"
               className={classes.image}
+              style={{
+                borderRadius: 5,
+              }}
             />
-            <div>BOOKSHOP</div>
+            <div>THE BOOK SHOP</div>
           </Typography>
           <div className={classes.grow} />
           {hide ? (

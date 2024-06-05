@@ -19,7 +19,6 @@ import SignIn from "./components/SignIn/SignIn";
 import UpdateProduct from "./components/UpdateProduct/UpdateProduct";
 import Checkout from "./components/CheckoutForm/Checkout/Checkout";
 import "./style.css";
-import Shipping from "./components/Shipping/Shipping";
 
 const App = () => {
   const [mobileOpen, setMobileOpen] = React.useState(false);
@@ -95,105 +94,111 @@ const App = () => {
   return (
     <div>
       <div>
-        {/* {newProducts.length > 0 ? ( */}
-        <>
-          <Router>
-            <div style={{ display: "flex" }}>
-              <Switch>
-                <Route exact path="/">
-                  <CssBaseline />
-                  <Navbar
-                    totalItems={totalItem}
-                    handleDrawerToggle={handleDrawerToggle}
-                    user={user}
-                  />
-                  <Products
-                    products={newProducts}
-                    featureProducts={featureProducts}
-                    onAddToCart={handleAddToCart}
-                    handleUpdateCartQty
-                  />
-                </Route>
-                <Route path="/product-view/:id" exact>
-                  <CssBaseline />
-                  <Navbar
-                    totalItems={totalItem}
-                    handleDrawerToggle={handleDrawerToggle}
-                  />
-                  <ProductView />
-                </Route>
-                <Route path="/create-product" exact>
-                  <CreateProduct />
-                </Route>
-                <Route path="/update-product/:id" exact>
-                  <UpdateProduct />
-                </Route>
-                <Route path="/auth/register" exact>
-                  <CssBaseline />
-                  <Navbar
-                    totalItems={totalItem}
-                    handleDrawerToggle={handleDrawerToggle}
-                    hide={true}
-                  />
-                  <Register />
-                </Route>
-                <Route path="/auth/signin" exact>
-                  <CssBaseline />
-                  <Navbar
-                    totalItems={totalItem}
-                    handleDrawerToggle={handleDrawerToggle}
-                    hide={true}
-                  />
-                  <SignIn />
-                </Route>
-                <Route path="/cart" exact>
-                  <CssBaseline />
-                  <Navbar
-                    totalItems={totalItem}
-                    setTotalItem={setTotalItem}
-                    handleDrawerToggle={handleDrawerToggle}
-                    hide={true}
-                  />
-                  <Cart
-                    order={order}
-                    totalItem={totalItem}
-                    setTotalItem={setTotalItem}
-                    onUpdateCartQty={() => {}}
-                    onRemoveFromCart={() => {}}
-                    onEmptyCart={() => {}}
-                  />
-                </Route>
-                <Route path="/shipping" exact>
-                  <CssBaseline />
-                  <Navbar
-                    totalItems={totalItem}
-                    setTotalItem={setTotalItem}
-                    handleDrawerToggle={handleDrawerToggle}
-                    hide={true}
-                  />
-                  <Shipping />
-                </Route>
-                <Route path="/checkout" exact>
-                  <Checkout order={order} user={user} error={errorMessage} />
-                </Route>
-                <Route path="/info/:id" exact>
-                  <Navbar
-                    totalItems={totalItem}
-                    handleDrawerToggle={handleDrawerToggle}
-                    hide={true}
-                  />
-                  <Banking user={user} />
-                </Route>
-              </Switch>
+        {newProducts.length == 0 ? (
+          <>
+            <div class="flex flex-col h-screen justify-between">
+              <Router>
+                <div style={{ display: "flex" }}>
+                  <Switch>
+                    <Route exact path="/">
+                      <CssBaseline />
+                      <Navbar
+                        totalItems={totalItem}
+                        handleDrawerToggle={handleDrawerToggle}
+                        user={user}
+                      />
+                      <Products
+                        products={newProducts}
+                        featureProducts={featureProducts}
+                        onAddToCart={handleAddToCart}
+                        handleUpdateCartQty
+                      />
+                    </Route>
+                    <Route path="/product-view/:id" exact>
+                      <CssBaseline />
+                      <Navbar
+                        totalItems={totalItem}
+                        handleDrawerToggle={handleDrawerToggle}
+                      />
+                      <ProductView />
+                    </Route>
+                    <Route path="/create-product" exact>
+                      <CreateProduct />
+                    </Route>
+                    <Route path="/update-product/:id" exact>
+                      <UpdateProduct />
+                    </Route>
+                    <Route path="/auth/register" exact>
+                      <CssBaseline />
+                      <Navbar
+                        totalItems={totalItem}
+                        handleDrawerToggle={handleDrawerToggle}
+                        hide={true}
+                      />
+                      <Register />
+                    </Route>
+                    <Route path="/auth/signin" exact>
+                      <CssBaseline />
+                      <Navbar
+                        totalItems={totalItem}
+                        handleDrawerToggle={handleDrawerToggle}
+                        hide={true}
+                      />
+                      <SignIn />
+                    </Route>
+                    <Route path="/cart" exact>
+                      <CssBaseline />
+                      <Navbar
+                        totalItems={totalItem}
+                        setTotalItem={setTotalItem}
+                        handleDrawerToggle={handleDrawerToggle}
+                        hide={true}
+                      />
+                      <Cart
+                        order={order}
+                        totalItem={totalItem}
+                        setTotalItem={setTotalItem}
+                        onUpdateCartQty={() => {}}
+                        onRemoveFromCart={() => {}}
+                        onEmptyCart={() => {}}
+                      />
+                    </Route>
+                    <Route path="/checkout" exact>
+                      <Checkout
+                        order={order}
+                        user={user}
+                        error={errorMessage}
+                      />
+                    </Route>
+                    <Route path="/info/:id" exact>
+                      <Navbar
+                        totalItems={totalItem}
+                        handleDrawerToggle={handleDrawerToggle}
+                        hide={true}
+                      />
+                      <Banking user={user} />
+                    </Route>
+                    <Route path="/about" exact>
+                      <CssBaseline />
+                      <Navbar
+                        totalItems={totalItem}
+                        setTotalItem={setTotalItem}
+                        handleDrawerToggle={handleDrawerToggle}
+                        hide={true}
+                      />
+                      <About />
+                    </Route>
+                  </Switch>
+                </div>
+              </Router>
+              <Footer />
             </div>
-          </Router>
-          <Footer />
-        </>
-        {/* ) : (
+          </>
+        ) : (
           <div className="loader">
             <img src={loadingImg} alt="Loading" />
           </div>
-        )} */}
+        )}
       </div>
     </div>
   );
