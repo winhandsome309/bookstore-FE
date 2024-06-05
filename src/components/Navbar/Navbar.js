@@ -94,7 +94,10 @@ const Navbar = ({ totalItems, hide = false, user }) => {
           </Typography>
           <div className="flex flex-row justify-between gap-3 h-full items-center align-middle ml-4">
             <div className="w-auto h-auto font-extrabold text-lg">
-              <a href={`/`} className="transition-all ease-in-out duration-200">
+              <a
+                href={`/`}
+                className="transition-all ease-in-out duration-200 a-router"
+              >
                 Home
               </a>
             </div>
@@ -109,7 +112,7 @@ const Navbar = ({ totalItems, hide = false, user }) => {
             <div className="w-auto h-auto font-extrabold text-lg">
               <a
                 href={`/about`}
-                className="transition-all ease-in-out duration-200"
+                className="transition-all ease-in-out duration-200 a-router"
               >
                 About
               </a>
@@ -117,7 +120,7 @@ const Navbar = ({ totalItems, hide = false, user }) => {
             <div className="w-auto h-auto font-extrabold text-lg">
               <a
                 href={`/term`}
-                className="transition-all ease-in-out duration-200"
+                className="transition-all ease-in-out duration-200 a-router"
               >
                 FAQs
               </a>

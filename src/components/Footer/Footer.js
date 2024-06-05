@@ -99,16 +99,16 @@ const Footer = () => {
                         <div className='w-auto h-auto font-extrabold text-lg pb-6'>
                             <a
                                 href={`/about`}
-                                className='transition-all ease-in-out duration-200'
+                                className='transition-all ease-in-out duration-200 a-router'
                             >
                                 About
                             </a>
                         </div>
-                        <div className='w-auto h-auto py-2 font-thin'>
+                        <div className='w-auto h-auto py-2'>
                             <a
                                 href={`/about`}
                                 
-                                className='transition-all ease-in-out duration-200'
+                                className='transition-all ease-in-out duration-200 a-router'
                             >
                                 Book store information
                             </a>
@@ -117,7 +117,7 @@ const Footer = () => {
                             <a
                                 href={`/term`}
                                 
-                                className='transition-all ease-in-out duration-200'
+                                className='transition-all ease-in-out duration-200 a-router'
                             >
                                 Shipping policies
                             </a>
@@ -126,7 +126,7 @@ const Footer = () => {
                             <a
                                 href={`/term`}
                                 
-                                className='transition-all ease-in-out duration-200'
+                                className='transition-all ease-in-out duration-200 a-router'
                             >
                                 Terms and conditions
                             </a>
@@ -137,7 +137,7 @@ const Footer = () => {
                         <div className='w-auto h-auto font-extrabold text-lg pb-6'>
                             Contact
                         </div>
-                        <div className='w-auto h-auto py-2 font-thin'>
+                        <div className='w-auto h-auto py-2'>
                             Email: thebookshop@gmail.com
                         </div>
                         <div className='w-auto h-auto py-2'>
@@ -146,7 +146,7 @@ const Footer = () => {
                         <div className='w-auto h-auto py-2'>Social media:</div>
                         <div className='w-auto h-auto py-2 flex flex-row justify-center md:justify-start gap-2'>
                             <a
-                                className='w-auto h-auto items-center'
+                                className='w-auto h-auto items-center a-router' 
                                 href=''
                                 target='_blank'
                             >
@@ -157,7 +157,7 @@ const Footer = () => {
                                 Facebook
                             </a>
                             <a
-                                className='w-auto h-auto items-center'
+                                className='w-auto h-auto items-center a-router'
                                 href=''
                                 target='_blank'
                             >
@@ -168,7 +168,7 @@ const Footer = () => {
                                 Youtube
                             </a>
                             <a
-                                className='w-auto h-auto items-center'
+                                className='w-auto h-auto items-center a-router'
                                 href=''
                                 target='_blank'
                             >
@@ -185,10 +185,10 @@ const Footer = () => {
                         <div className='w-auto h-auto font-extrabold text-lg pb-6'>
                             Action
                         </div>
-                        <div className='w-auto h-auto py-2 font-thin'>
+                        <div className='w-auto h-auto py-2'>
                             <a
                                 href={`/profile`}
-                                className='transition-all ease-in-out duration-200'
+                                className='transition-all a-router ease-in-out duration-200'
                             >
                                 Acount
                             </a>
@@ -197,7 +197,7 @@ const Footer = () => {
                             <a
                                 href={`/cart`}
                                 
-                                className='transition-all ease-in-out duration-200'
+                                className='transition-all a-router ease-in-out duration-200'
                             >
                                 Cart
                             </a>
@@ -206,7 +206,7 @@ const Footer = () => {
                             <a
                                 href={`/myorder`}
                                 
-                                className='transition-all ease-in-out duration-200'
+                                className='transition-all a-router ease-in-out duration-200'
                             >
                                 Order
                             </a>

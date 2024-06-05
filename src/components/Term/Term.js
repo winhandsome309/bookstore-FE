@@ -70,28 +70,13 @@ const Term = () => {
                     </details>
                     <details>
                         <summary class='py-2 outline-none cursor-pointer focus:underline'>
-                            Do you offer international shipping?
-                        </summary>
-                        <div class='px-4 pb-4'>
-                            <p>
-                                Currently, we only provide shipping services
-                                within Vietnam. However, we may consider
-                                expanding our shipping options to international
-                                locations in the future. Please stay updated
-                                with our website for any changes in shipping
-                                destinations.
-                            </p>
-                        </div>
-                    </details>
-                    <details>
-                        <summary class='py-2 outline-none cursor-pointer focus:underline'>
                             What is your customer support contact?
                         </summary>
                         <div class='px-4 pb-4'>
                             <p>
                                 If you have any questions, concerns, or need
                                 assistance, you can reach our customer support
-                                team at 9911083755 during our business hours,
+                                team at 0123456789 during our business hours,
                                 Monday to Saturday from 10 am to 6 pm. You can
                                 also contact us via email at{" "}
                                 <a href='' class='underline'>
