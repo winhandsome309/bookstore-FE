@@ -177,8 +177,8 @@ const Navbar = ({ totalItems, hide = false, user }) => {
                     }
                   >
                     <IconButton
-                      component={Link}
-                      to={"/info/" + user["id"]}
+                      // component={Link}
+                      // to={"/info/" + user["id"]}
                       aria-label="user info"
                       color="inherit"
                     >
