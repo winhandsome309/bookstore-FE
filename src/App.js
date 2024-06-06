@@ -95,7 +95,7 @@ const App = () => {
   return (
     <div>
       <div>
-        {newProducts.length == 0 ? (
+        {newProducts.length != 0 ? (
           <>
             <div class="flex flex-col h-screen justify-between">
               <Router>
