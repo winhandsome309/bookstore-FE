@@ -72,41 +72,42 @@ const Products = ({ products, onAddToCart, featureProducts }) => {
       </div>
 
       {searchTerm === "" && (
-        <div className={classes.categorySection}>
-          <h1 className={classes.categoryHeader}>Categories</h1>
-          <h3 className={classes.categoryDesc}>
-            Browse our featured categories
-          </h3>
-          <div className={classes.buttonSection}>
-            <div>
-              <Link to="manga">
-                <button
-                  className={classes.categoryButton}
-                  style={{ backgroundImage: `url(${mangaBg})` }}
-                ></button>
-              </Link>
-              <div className={classes.categoryName}>Manga</div>
-            </div>
-            <div>
-              <Link to="biography">
-                <button
-                  className={classes.categoryButton}
-                  style={{ backgroundImage: `url(${bioBg})` }}
-                ></button>
-              </Link>
-              <div className={classes.categoryName}>Biography</div>
-            </div>
-            <div>
-              <Link to="fiction">
-                <button
-                  className={classes.categoryButton}
-                  style={{ backgroundImage: `url(${fictionBg})` }}
-                ></button>
-              </Link>
-              <div className={classes.categoryName}>Fiction</div>
-            </div>
-          </div>
-        </div>
+        // <div className={classes.categorySection}>
+        //   <h1 className={classes.categoryHeader}>Categories</h1>
+        //   <h3 className={classes.categoryDesc}>
+        //     Browse our featured categories
+        //   </h3>
+        //   <div className={classes.buttonSection}>
+        //     <div>
+        //       <Link to="manga">
+        //         <button
+        //           className={classes.categoryButton}
+        //           style={{ backgroundImage: `url(${mangaBg})` }}
+        //         ></button>
+        //       </Link>
+        //       <div className={classes.categoryName}>Manga</div>
+        //     </div>
+        //     <div>
+        //       <Link to="biography">
+        //         <button
+        //           className={classes.categoryButton}
+        //           style={{ backgroundImage: `url(${bioBg})` }}
+        //         ></button>
+        //       </Link>
+        //       <div className={classes.categoryName}>Biography</div>
+        //     </div>
+        //     <div>
+        //       <Link to="fiction">
+        //         <button
+        //           className={classes.categoryButton}
+        //           style={{ backgroundImage: `url(${fictionBg})` }}
+        //         ></button>
+        //       </Link>
+        //       <div className={classes.categoryName}>Fiction</div>
+        //     </div>
+        //   </div>
+        // </div>
+        <></>
       )}
 
       <div className={classes.carouselSection}>
@@ -149,7 +150,7 @@ const Products = ({ products, onAddToCart, featureProducts }) => {
 
       {searchTerm === "" && (
         <>
-          <div>
+          {/* <div>
             <h3 className={classes.contentHeader}>
               Best <span style={{ color: "#f1361d" }}>Sellers</span>
             </h3>
@@ -173,7 +174,7 @@ const Products = ({ products, onAddToCart, featureProducts }) => {
                 </Grid>
               ))}
             </Grid>
-          </div>
+          </div> */}
         </>
       )}
 

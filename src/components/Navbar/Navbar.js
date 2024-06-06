@@ -12,6 +12,7 @@ import axios from "axios";
 import React from "react";
 import { Link } from "react-router-dom";
 import logo from "../../assets/Logo.png";
+import colorful from "../../assets/Colorful.png";
 import useStyles from "./styles";
 
 const Navbar = ({ totalItems, hide = false, user }) => {
@@ -82,7 +83,7 @@ const Navbar = ({ totalItems, hide = false, user }) => {
             color="inherit"
           >
             <img
-              src={logo}
+              src={colorful}
               alt="Book Store App"
               height="50px"
               className={classes.image}
@@ -131,7 +132,7 @@ const Navbar = ({ totalItems, hide = false, user }) => {
             <></>
           ) : (
             <div className={classes.menuButton}>
-              <IconButton
+              {/* <IconButton
                 aria-label="Create product"
                 color="inherit"
                 onClick={() => {
@@ -141,7 +142,7 @@ const Navbar = ({ totalItems, hide = false, user }) => {
                 <Badge color="secondary">
                   <AddCircleIcon />
                 </Badge>
-              </IconButton>
+              </IconButton> */}
               <IconButton
                 component={Link}
                 to="/cart"

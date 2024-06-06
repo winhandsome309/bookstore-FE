@@ -21,7 +21,11 @@ import Checkout from "./components/CheckoutForm/Checkout/Checkout";
 import "./style.css";
 import About from "./components/About/About";
 import Term from "./components/Term/Term";
+import ReactGA from "react-ga4";
+
 const App = () => {
+  ReactGA.initialize("G-MRY66Y84L7");
+
   const [mobileOpen, setMobileOpen] = React.useState(false);
   const [products, setProducts] = useState([]);
   const [featureProducts, setFeatureProducts] = useState([]);
